@@ -1,3 +1,8 @@
 include <basic.scad>;
+od = 50; // Outer diameter
+id = 45; // Inner diameter
+h  = 40; // Height
+b  = 60; // Bell diameter
+$fn = 15; // Number of fragments (mesh quality)
 
-basic_vstack(58, 53.75, 40, 90, $fn = 15);
+basic_vstack(od, id, h, b, $fn = $fn);
