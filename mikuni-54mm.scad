@@ -7,7 +7,7 @@ carbSpacing = 25; // Space between outer diameters of each carb
 stackBellDiameter = 90; // Diameter of the bell
 stackHeight = 40; // Height of the stack (not including carb)
 stackThickness = 4; // Thickness of the walls of the mesh
-stackNotches = 0; // Relieves edges of bell so stacks can be placed in a row (0, 1, or 2)
+stackNotches = 2; // Relieves edges of bell so stacks can be placed in a row (0, 1, or 2)
 
 fragments = 16; // Determines overall quality of mesh
 difference() {
