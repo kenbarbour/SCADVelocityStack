@@ -2,12 +2,16 @@ include <basic.scad>;
 
 carbOuterDiameter = 54; // Outer diameter of the carb lip
 carbDepth = 10; // Depth of the lip around the carb
-carbSpacing = 25; // Space between outer diameters of each carb
+carbSpacing = 25.25; // Space between outer diameters of each carb
 
 stackBellDiameter = 90; // Diameter of the bell
 stackHeight = 40; // Height of the stack (not including carb)
 stackThickness = 4; // Thickness of the walls of the mesh
 stackNotches = 2; // Relieves edges of bell so stacks can be placed in a row (0, 1, or 2)
+
+reliefCount = 8; // Number of relief cuts along base of mesh
+reliefThickness = 1; // Thickness or width of relief cuts
+reliefDepth = 5; // Depth or height of relief cuts
 
 fragments = 16; // Determines overall quality of mesh
 difference() {
@@ -22,7 +26,7 @@ difference() {
 					$fn=fragments
 				);
 			cylinder(
-					r1 = (carbOuterDiameter+1)/2,
+					r1 = (carbOuterDiameter+1.5)/2,
 					r2 = (carbOuterDiameter)/2,
 					h = carbDepth,
 					$fn=fragments
