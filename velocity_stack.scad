@@ -6,7 +6,7 @@
  * @param bell Diameter of bell
  * @param f flare factor (positive integer) defines the harshness of the curve
  */
-module basic_vstack(od, id, h, bell, f=3, $fn=32)
+module velocity_stack(od, id, h, bell, f=3, $fn=32)
 {
 
 	heightDivisions = $fn / 4;
@@ -31,6 +31,21 @@ module basic_vstack(od, id, h, bell, f=3, $fn=32)
 				);
 		}
 	}
+}
+
+/**
+ * Poorly named alias of the velocity_stack module
+ * @alias velocity_stack
+ * @param od Outer diameter 
+ * @param id Inner diameter (bore)
+ * @param h Overall height of the stack
+ * @param bell Diameter of bell
+ * @param f flare factor (positive integer) defines the harshness of the curve
+ * @deprecated
+ */
+module basic_vstack(od, id, h, bell, f=3, $fn=32) {
+	echo("basic_vstack module is deprecated. Use velocity_stack instead");
+	velocity_stack(od, id, h, bell, f, $fn);
 }
 
 /**
