@@ -5,4 +5,4 @@ h  = 40; // Height
 b  = 60; // Bell diameter
 $fn = 15; // Number of fragments (mesh quality)
 
-basic_vstack(od, id, h, b, $fn = $fn);
+velocity_stack(od, id, h, b, $fn = $fn);

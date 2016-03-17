@@ -52,7 +52,7 @@ difference() {
 		
 		// Velocity stack bell
 		translate([0,0,carbDepth])
-			basic_vstack(
+			velocity_stack(
 					carbOuterDiameter+stackThickness/2,
 					carbOuterDiameter,
 					stackHeight,
